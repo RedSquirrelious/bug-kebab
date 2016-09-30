@@ -1,17 +1,20 @@
 Rails.application.routes.draw do
-  get 'beetle/index'
 
-  get 'beetle/new'
+  root to: 'beetle#index'
 
-  get 'beetle/create'
+  get 'beetle/index' => 'beetle#index'
 
-  get 'beetle/show'
+  get 'beetle/new' => 'beetle#new'
 
-  get 'beetle/destroy'
+  post 'beetle/create' => 'beetle#create'
 
-  get 'beetle/edit'
+  get 'beetle/show' => 'beetle#show'
 
-  get 'beetle/update'
+  delete 'beetle/destroy' => 'beetle#destroy'
+
+  patch 'beetle/edit' => 'beetle#edit'
+
+  patch 'beetle/update' => 'beetle#update'
 
   get 'beattle/index'
 
@@ -19,11 +22,11 @@ Rails.application.routes.draw do
 
   get 'beattle/show'
 
-  get 'beattle/new'
+  post 'beattle/new'
 
-  get 'beattle/create'
+  post 'beattle/create'
 
-  get 'beattle/destroy'
+  delete 'beattle/destroy'
 
   get 'beattle/edit'
 
