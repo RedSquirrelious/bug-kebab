@@ -1,2 +1,7 @@
-<h1>Beetle#index</h1>
-<p>Find me in app/views/beetle/index.html.erb</p>
+<h1>All the Beetles</h1>
+<article>
+<p><% @beetles.each do |b| %>
+<p>	Name: <%= b.name %></p>
+<p>	Description: <%= b.description %> </p>
+</article>
+	<% end %>
